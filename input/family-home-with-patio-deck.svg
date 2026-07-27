@@ -1,0 +1,330 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+    <defs>
+        <style>
+            .wall-ext { stroke: #1e1e1e; stroke-width: 8; stroke-linecap: square; fill: none; }
+            .wall-int { stroke: #333333; stroke-width: 4; stroke-linecap: square; fill: none; }
+            .window { fill: #e1f5fe; stroke: #1e1e1e; stroke-width: 2; }
+            .door-leaf { stroke: #f4511e; stroke-width: 3; stroke-linecap: round; fill: none; }
+            .door-swing { fill: none; stroke: #f4511e; stroke-width: 1.5; stroke-dasharray: 4 4; }
+            .glass-door { fill: #b3e5fc; stroke: #1e1e1e; stroke-width: 1; }
+            .furniture { fill: #ffffff; stroke: #757575; stroke-width: 1.5; }
+            .fixture { fill: #f5f5f5; stroke: #616161; stroke-width: 1.5; }
+            .dashed-line { stroke: #9e9e9e; stroke-width: 2; stroke-dasharray: 6 6; fill: none; }
+            
+            .tile-bg { fill: url(#tile-pattern); }
+            .wood-bg { fill: url(#wood-pattern); }
+            .deck-bg { fill: url(#deck-pattern); }
+            .grass-bg { fill: #f1f8e9; stroke: #c5e1a5; stroke-width: 2; stroke-dasharray: 8 8; }
+            
+            .text-title { font-family: 'Segoe UI', Helvetica, sans-serif; font-size: 14px; font-weight: bold; fill: #212121; text-anchor: middle; letter-spacing: 2px; }
+            .text-area { font-family: 'Segoe UI', Helvetica, sans-serif; font-size: 11px; fill: #757575; text-anchor: middle; }
+            .text-scale { font-family: 'Segoe UI', Helvetica, sans-serif; font-size: 12px; fill: #212121; text-anchor: middle; }
+        </style>
+        
+        <pattern id="tile-pattern" width="24" height="24" patternUnits="userSpaceOnUse">
+            <rect width="24" height="24" fill="#fafafa" stroke="#e0e0e0" stroke-width="0.5"/>
+        </pattern>
+        
+        <pattern id="wood-pattern" width="12" height="120" patternUnits="userSpaceOnUse">
+            <rect width="12" height="120" fill="#fcfaf8" />
+            <line x1="12" y1="0" x2="12" y2="120" stroke="#efebe9" stroke-width="1"/>
+        </pattern>
+
+        <pattern id="deck-pattern" width="120" height="15" patternUnits="userSpaceOnUse">
+            <rect width="120" height="15" fill="#d7ccc8" />
+            <line x1="0" y1="15" x2="120" y2="15" stroke="#a1887f" stroke-width="1"/>
+        </pattern>
+    </defs>
+
+    <!-- Background -->
+    <rect width="1200" height="900" fill="#ffffff" />
+    
+    <!-- Exterior Landscaping -->
+    <rect x="100" y="150" width="1000" height="600" rx="20" class="grass-bg" />
+    <rect x="800" y="700" width="200" height="100" class="deck-bg" stroke="#8d6e63" stroke-width="2"/>
+    <path d="M540,700 L540,850 L610,850 L610,700 Z" fill="#eeeeee" stroke="#bdbdbd" stroke-width="1"/>
+    <line x1="540" y1="750" x2="610" y2="750" stroke="#bdbdbd" stroke-width="1"/>
+    <line x1="540" y1="800" x2="610" y2="800" stroke="#bdbdbd" stroke-width="1"/>
+
+    <!-- ==================== FLOOR FINISHES ==================== -->
+    
+    <!-- Left Wing: Bedrooms & Bath -->
+    <rect x="150" y="200" width="300" height="220" class="wood-bg" /> <!-- Master Bed -->
+    <rect x="150" y="520" width="300" height="180" class="wood-bg" /> <!-- Bed 2 -->
+    <rect x="150" y="420" width="150" height="100" class="tile-bg" /> <!-- Bathroom -->
+    <rect x="300" y="420" width="150" height="50" class="wood-bg" /> <!-- WIC -->
+    <rect x="300" y="470" width="150" height="50" class="wood-bg" /> <!-- Mini-hall -->
+
+    <!-- Middle Core: Circulation & Utilities -->
+    <rect x="450" y="200" width="100" height="400" class="wood-bg" /> <!-- Corridor -->
+    <rect x="450" y="600" width="250" height="100" class="tile-bg" /> <!-- Foyer -->
+    <rect x="550" y="200" width="150" height="150" class="tile-bg" /> <!-- Storage -->
+    <rect x="550" y="350" width="150" height="150" class="tile-bg" /> <!-- Laundry -->
+    <rect x="550" y="500" width="150" height="100" class="tile-bg" /> <!-- Guest WC -->
+
+    <!-- Right Wing: Living Areas -->
+    <rect x="700" y="200" width="350" height="150" class="tile-bg" /> <!-- Kitchen -->
+    <rect x="700" y="350" width="350" height="350" class="wood-bg" /> <!-- Dining & Living -->
+
+    <!-- ==================== WALLS ==================== -->
+
+    <!-- Exterior Walls -->
+    <!-- Top -->
+    <line x1="150" y1="200" x2="250" y2="200" class="wall-ext" />
+    <line x1="350" y1="200" x2="850" y2="200" class="wall-ext" />
+    <line x1="950" y1="200" x2="1050" y2="200" class="wall-ext" />
+    
+    <!-- Right -->
+    <line x1="1050" y1="200" x2="1050" y2="400" class="wall-ext" />
+    <line x1="1050" y1="500" x2="1050" y2="550" class="wall-ext" />
+    <line x1="1050" y1="650" x2="1050" y2="700" class="wall-ext" />
+    
+    <!-- Bottom -->
+    <line x1="150" y1="700" x2="250" y2="700" class="wall-ext" />
+    <line x1="350" y1="700" x2="540" y2="700" class="wall-ext" />
+    <line x1="610" y1="700" x2="800" y2="700" class="wall-ext" />
+    <line x1="1000" y1="700" x2="1050" y2="700" class="wall-ext" />
+    
+    <!-- Left -->
+    <line x1="150" y1="200" x2="150" y2="250" class="wall-ext" />
+    <line x1="150" y1="350" x2="150" y2="450" class="wall-ext" />
+    <line x1="150" y1="500" x2="150" y2="550" class="wall-ext" />
+    <line x1="150" y1="650" x2="150" y2="700" class="wall-ext" />
+
+    <!-- Interior Walls: Left Wing -->
+    <line x1="150" y1="420" x2="375" y2="420" class="wall-int" />
+    <line x1="415" y1="420" x2="450" y2="420" class="wall-int" />
+    <line x1="150" y1="520" x2="375" y2="520" class="wall-int" />
+    <line x1="415" y1="520" x2="450" y2="520" class="wall-int" />
+    <line x1="300" y1="470" x2="320" y2="470" class="wall-int" />
+    <line x1="360" y1="470" x2="450" y2="470" class="wall-int" />
+    <line x1="300" y1="420" x2="300" y2="475" class="wall-int" />
+    <line x1="300" y1="515" x2="300" y2="520" class="wall-int" />
+
+    <!-- Interior Walls: Mid Core -->
+    <line x1="450" y1="200" x2="450" y2="470" class="wall-int" />
+    <line x1="450" y1="520" x2="450" y2="700" class="wall-int" />
+    <line x1="550" y1="200" x2="550" y2="250" class="wall-int" />
+    <line x1="550" y1="290" x2="550" y2="400" class="wall-int" />
+    <line x1="550" y1="440" x2="550" y2="600" class="wall-int" />
+    <line x1="550" y1="350" x2="700" y2="350" class="wall-int" />
+    <line x1="550" y1="500" x2="700" y2="500" class="wall-int" />
+    <line x1="550" y1="600" x2="620" y2="600" class="wall-int" />
+    <line x1="660" y1="600" x2="700" y2="600" class="wall-int" />
+
+    <!-- Interior Walls: Right Wing Split -->
+    <line x1="700" y1="200" x2="700" y2="220" class="wall-int" />
+    <line x1="700" y1="300" x2="700" y2="600" class="wall-int" />
+    <line x1="700" y1="680" x2="700" y2="700" class="wall-int" />
+
+    <!-- Openings / Arches (Dashed) -->
+    <line x1="450" y1="470" x2="450" y2="520" class="dashed-line" />
+    <line x1="700" y1="220" x2="700" y2="300" class="dashed-line" />
+    <line x1="700" y1="600" x2="700" y2="680" class="dashed-line" />
+    <line x1="450" y1="600" x2="550" y2="600" class="dashed-line" />
+
+    <!-- ==================== DOORS ==================== -->
+    
+    <!-- Main Entrance -->
+    <line x1="540" y1="700" x2="540" y2="665" class="door-leaf" />
+    <path d="M 540,665 A 35,35 0 0,1 575,700" class="door-swing" />
+    <line x1="610" y1="700" x2="610" y2="665" class="door-leaf" />
+    <path d="M 610,665 A 35,35 0 0,0 575,700" class="door-swing" />
+
+    <!-- Master Bedroom -->
+    <line x1="415" y1="420" x2="415" y2="380" class="door-leaf" />
+    <path d="M 415,380 A 40,40 0 0,0 375,420" class="door-swing" />
+
+    <!-- Bedroom 2 -->
+    <line x1="415" y1="520" x2="415" y2="560" class="door-leaf" />
+    <path d="M 415,560 A 40,40 0 0,1 375,520" class="door-swing" />
+
+    <!-- Bathroom -->
+    <line x1="300" y1="515" x2="260" y2="515" class="door-leaf" />
+    <path d="M 260,515 A 40,40 0 0,1 300,475" class="door-swing" />
+
+    <!-- Walk-in Closet -->
+    <line x1="320" y1="470" x2="320" y2="430" class="door-leaf" />
+    <path d="M 320,430 A 40,40 0 0,1 360,470" class="door-swing" />
+
+    <!-- Storage Room -->
+    <line x1="550" y1="290" x2="590" y2="290" class="door-leaf" />
+    <path d="M 590,290 A 40,40 0 0,0 550,250" class="door-swing" />
+
+    <!-- Laundry Room -->
+    <line x1="550" y1="440" x2="590" y2="440" class="door-leaf" />
+    <path d="M 590,440 A 40,40 0 0,0 550,400" class="door-swing" />
+
+    <!-- Guest WC -->
+    <line x1="660" y1="600" x2="660" y2="560" class="door-leaf" />
+    <path d="M 660,560 A 40,40 0 0,0 620,600" class="door-swing" />
+
+
+    <!-- ==================== WINDOWS & SLIDING DOORS ==================== -->
+    
+    <rect x="250" y="196" width="100" height="8" class="window" />
+    <rect x="850" y="196" width="100" height="8" class="window" />
+    
+    <rect x="1046" y="400" width="8" height="100" class="window" />
+    <rect x="1046" y="550" width="8" height="100" class="window" />
+    
+    <rect x="250" y="696" width="100" height="8" class="window" />
+    
+    <rect x="146" y="250" width="8" height="100" class="window" />
+    <rect x="146" y="450" width="8" height="50" class="window" />
+    <rect x="146" y="550" width="8" height="100" class="window" />
+
+    <!-- Living Room Sliding Door -->
+    <rect x="800" y="696" width="100" height="6" class="glass-door" />
+    <rect x="900" y="700" width="100" height="6" class="glass-door" />
+
+
+    <!-- ==================== FURNITURE & FIXTURES ==================== -->
+
+    <!-- Master Bedroom -->
+    <rect x="250" y="220" width="140" height="150" rx="8" class="furniture" /> <!-- Bed -->
+    <rect x="260" y="230" width="55" height="30" rx="4" class="furniture" /> <!-- Pillow L -->
+    <rect x="325" y="230" width="55" height="30" rx="4" class="furniture" /> <!-- Pillow R -->
+    <line x1="250" y1="280" x2="390" y2="280" stroke="#bdbdbd" stroke-width="1.5" />
+    <rect x="205" y="230" width="35" height="30" rx="3" class="furniture" /> <!-- Nightstand L -->
+    <rect x="400" y="230" width="35" height="30" rx="3" class="furniture" /> <!-- Nightstand R -->
+    <rect x="170" y="360" width="100" height="35" class="furniture" /> <!-- Dresser -->
+
+    <!-- Bedroom 2 -->
+    <rect x="250" y="520" width="120" height="140" rx="8" class="furniture" /> <!-- Bed -->
+    <rect x="280" y="530" width="60" height="30" rx="4" class="furniture" /> <!-- Pillow -->
+    <line x1="250" y1="580" x2="370" y2="580" stroke="#bdbdbd" stroke-width="1.5" />
+    <rect x="380" y="530" width="35" height="30" rx="3" class="furniture" /> <!-- Nightstand -->
+    <rect x="170" y="640" width="100" height="40" class="furniture" /> <!-- Desk -->
+    <circle cx="220" cy="620" r="12" class="furniture" /> <!-- Desk Chair -->
+
+    <!-- Bathroom -->
+    <rect x="150" y="420" width="70" height="100" class="fixture" /> <!-- Shower/Tub -->
+    <circle cx="185" cy="470" r="6" fill="#9e9e9e" />
+    <rect x="250" y="425" width="40" height="25" rx="4" class="fixture" /> <!-- Toilet Tank -->
+    <ellipse cx="270" cy="455" rx="12" ry="16" class="fixture" /> <!-- Toilet Bowl -->
+    <rect x="230" y="480" width="70" height="40" class="fixture" /> <!-- Vanity -->
+    <ellipse cx="265" cy="500" rx="20" ry="12" fill="#ffffff" stroke="#9e9e9e" stroke-width="1" />
+
+    <!-- Walk-In Closet -->
+    <line x1="310" y1="420" x2="310" y2="460" class="dashed-line" stroke="#757575" />
+    <line x1="310" y1="430" x2="440" y2="430" class="dashed-line" stroke="#757575" />
+    <line x1="440" y1="430" x2="440" y2="460" class="dashed-line" stroke="#757575" />
+
+    <!-- Storage Room -->
+    <line x1="565" y1="200" x2="565" y2="340" class="dashed-line" stroke="#757575" />
+    <line x1="565" y1="215" x2="690" y2="215" class="dashed-line" stroke="#757575" />
+    <line x1="685" y1="215" x2="685" y2="340" class="dashed-line" stroke="#757575" />
+
+    <!-- Laundry Room -->
+    <rect x="560" y="360" width="45" height="50" rx="4" class="fixture" /> <!-- Washer -->
+    <circle cx="582.5" cy="385" r="14" fill="#ffffff" stroke="#9e9e9e" stroke-width="1" />
+    <rect x="615" y="360" width="45" height="50" rx="4" class="fixture" /> <!-- Dryer -->
+    <circle cx="637.5" cy="385" r="14" fill="#ffffff" stroke="#9e9e9e" stroke-width="1" />
+    <rect x="550" y="440" width="40" height="60" class="fixture" /> <!-- Sink Unit -->
+    <rect x="555" y="450" width="30" height="40" rx="4" fill="#ffffff" stroke="#9e9e9e" />
+
+    <!-- Guest WC -->
+    <rect x="650" y="510" width="40" height="25" rx="4" class="fixture" /> <!-- Tank -->
+    <ellipse cx="670" cy="540" rx="12" ry="16" class="fixture" /> <!-- Bowl -->
+    <rect x="560" y="520" width="40" height="35" class="fixture" /> <!-- Sink -->
+    <ellipse cx="580" cy="537" rx="12" ry="10" fill="#ffffff" stroke="#9e9e9e" />
+
+    <!-- Kitchen -->
+    <rect x="700" y="200" width="350" height="55" class="fixture" /> <!-- Top Counter -->
+    <rect x="995" y="255" width="55" height="95" class="fixture" /> <!-- Right Counter -->
+    <rect x="800" y="280" width="160" height="50" rx="2" class="fixture" /> <!-- Island -->
+    
+    <!-- Kitchen Details -->
+    <rect x="840" y="210" width="60" height="35" rx="4" fill="#ffffff" stroke="#9e9e9e" /> <!-- Sink -->
+    <circle cx="860" cy="227" r="8" fill="none" stroke="#616161" />
+    <circle cx="880" cy="227" r="8" fill="none" stroke="#616161" />
+    
+    <rect x="940" y="210" width="50" height="40" rx="2" fill="#eeeeee" stroke="#9e9e9e" /> <!-- Stove -->
+    <circle cx="955" cy="220" r="6" fill="#757575" /> <circle cx="975" cy="220" r="6" fill="#757575" />
+    <circle cx="955" cy="240" r="6" fill="#757575" /> <circle cx="975" cy="240" r="6" fill="#757575" />
+    
+    <rect x="995" y="300" width="55" height="50" rx="2" class="fixture" /> <!-- Fridge -->
+    <line x1="1005" y1="310" x2="1005" y2="340" stroke="#9e9e9e" stroke-width="2" />
+    
+    <!-- Island Stools -->
+    <circle cx="820" cy="345" r="10" class="furniture" />
+    <circle cx="860" cy="345" r="10" class="furniture" />
+    <circle cx="900" cy="345" r="10" class="furniture" />
+    <circle cx="940" cy="345" r="10" class="furniture" />
+
+    <!-- Dining Area -->
+    <rect x="800" y="390" width="160" height="70" rx="6" class="furniture" /> <!-- Table -->
+    <!-- Chairs Top -->
+    <rect x="820" y="375" width="20" height="15" rx="4" class="furniture" />
+    <rect x="870" y="375" width="20" height="15" rx="4" class="furniture" />
+    <rect x="920" y="375" width="20" height="15" rx="4" class="furniture" />
+    <!-- Chairs Bottom -->
+    <rect x="820" y="460" width="20" height="15" rx="4" class="furniture" />
+    <rect x="870" y="460" width="20" height="15" rx="4" class="furniture" />
+    <rect x="920" y="460" width="20" height="15" rx="4" class="furniture" />
+    <!-- Chairs Sides -->
+    <rect x="785" y="415" width="15" height="20" rx="4" class="furniture" />
+    <rect x="960" y="415" width="15" height="20" rx="4" class="furniture" />
+
+    <!-- Living Area -->
+    <rect x="750" y="520" width="250" height="160" fill="#f5f5f5" stroke="#e0e0e0" stroke-dasharray="4 4" rx="10" /> <!-- Rug -->
+    <path d="M 770,540 L 950,540 C 960,540 960,550 960,550 L 960,630 C 960,640 950,640 950,640 L 910,640 L 910,590 L 770,590 Z" class="furniture" /> <!-- L-Sofa -->
+    <rect x="810" y="610" width="70" height="40" rx="4" fill="#fafafa" stroke="#9e9e9e" stroke-width="1.5" /> <!-- Coffee Table -->
+    <rect x="1030" y="550" width="20" height="100" class="furniture" /> <!-- TV Unit -->
+    <rect x="1040" y="565" width="4" height="70" fill="#212121" /> <!-- TV -->
+    <circle cx="780" cy="660" r="16" fill="#e8f5e9" stroke="#81c784" stroke-width="2" /> <!-- Plant -->
+
+
+    <!-- ==================== ROOM LABELS ==================== -->
+    
+    <text x="300" y="310" class="text-title">MASTER BEDROOM</text>
+    <text x="300" y="330" class="text-area">22 m²</text>
+
+    <text x="300" y="610" class="text-title">BEDROOM 2</text>
+    <text x="300" y="630" class="text-area">16 m²</text>
+
+    <text x="225" y="475" class="text-title">BATH</text>
+    <text x="375" y="450" class="text-title">W.I.C.</text>
+
+    <text x="625" y="270" class="text-title">STORAGE</text>
+    <text x="625" y="430" class="text-title">LAUNDRY</text>
+    <text x="625" y="560" class="text-title">WC</text>
+    
+    <text x="575" y="655" class="text-title">FOYER</text>
+
+    <text x="875" y="250" class="text-title">KITCHEN</text>
+    
+    <text x="880" y="430" class="text-title">DINING</text>
+    
+    <text x="880" y="600" class="text-title">LIVING ROOM</text>
+    <text x="880" y="620" class="text-area">42 m²</text>
+    
+    <text x="900" y="755" class="text-title" fill="#5d4037">PATIO DECK</text>
+
+
+    <!-- ==================== COMPASS & SCALE ==================== -->
+    
+    <!-- Compass -->
+    <g transform="translate(100, 800)">
+        <circle cx="0" cy="0" r="24" fill="none" stroke="#424242" stroke-width="2"/>
+        <path d="M 0,-30 L 8,0 L 0,-6 L -8,0 Z" fill="#424242"/>
+        <path d="M 0,30 L 4,0 L 0,6 L -4,0 Z" fill="#9e9e9e"/>
+        <text x="0" y="-40" class="text-scale" font-weight="bold">N</text>
+    </g>
+
+    <!-- Scale Bar (1m = 50px) -->
+    <g transform="translate(180, 800)">
+        <line x1="0" y1="0" x2="200" y2="0" stroke="#424242" stroke-width="2"/>
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#424242" stroke-width="2"/>
+        <line x1="50" y1="-5" x2="50" y2="5" stroke="#424242" stroke-width="2"/>
+        <line x1="100" y1="-5" x2="100" y2="5" stroke="#424242" stroke-width="2"/>
+        <line x1="200" y1="-5" x2="200" y2="5" stroke="#424242" stroke-width="2"/>
+        <rect x="0" y="-2" width="50" height="4" fill="#424242"/>
+        <rect x="100" y="-2" width="100" height="4" fill="#424242"/>
+        <text x="0" y="20" class="text-scale">0</text>
+        <text x="50" y="20" class="text-scale">1m</text>
+        <text x="100" y="20" class="text-scale">2m</text>
+        <text x="200" y="20" class="text-scale">4m</text>
+    </g>
+</svg>
